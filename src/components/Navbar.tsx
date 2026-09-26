@@ -3,9 +3,9 @@ import { Heart, Menu, X } from 'lucide-react'
 import logo from '../assets/logo-mark.png'
 
 const links = [
-  { href: '#about', label: 'About' },
+  { href: '#about', label: 'About Us' },
   { href: '#what-we-do', label: 'What We Do' },
-  { href: '#team', label: 'Team' },
+  { href: '#team', label: 'Members' },
   { href: '#supporters', label: 'Supporters' },
   { href: '#volunteer', label: 'Volunteer' },
 ]
@@ -29,8 +29,8 @@ export default function Navbar() {
         <a href="#top" className="nav__brand" onClick={close}>
           <img src={logo} alt="" width={64} height={51} />
           <span>
-            <strong>24Telemed</strong>
-            <small>Foundation</small>
+            <strong>24Telemed Foundation</strong>
+            <small>Connecting Rural Africa</small>
           </span>
         </a>
 

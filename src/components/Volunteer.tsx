@@ -26,9 +26,9 @@ export default function Volunteer() {
         <div className="section__head reveal">
           <span className="eyebrow">Get involved</span>
           <h2>
-            Volunteer with <em>24Telemed</em>
+            Volunteer with 24Telemed
           </h2>
-          <p className="lead">There's a place for you in closing the healthcare gap.</p>
+          <p className="lead">Join us in making a positive impact on people's lives!</p>
         </div>
 
         <div className="cards">
@@ -44,7 +44,7 @@ export default function Volunteer() {
         </div>
 
         <div className="volunteer__cta reveal">
-          <p>Ready to help? Give us a call and we'll find the right role for you.</p>
+          <p>Ready to help? Give us a call.</p>
           <a href={org.phoneHref} className="btn btn--primary btn--lg">
             <Phone size={18} /> {org.phone}
           </a>

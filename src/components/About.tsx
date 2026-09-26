@@ -29,7 +29,7 @@ export default function About() {
           <div className="about__copy reveal">
             <span className="eyebrow">About us</span>
             <h2>
-              Healthcare in rural Africa is still <em>far from reality</em>.
+              Healthcare in rural Africa is still far from reality.
             </h2>
             <p>
               Poor funding and limited community engagement on health programmes keep medical

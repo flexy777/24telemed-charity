@@ -8,7 +8,7 @@ export default function Challenge() {
         <div className="challenge__head reveal">
           <span className="eyebrow">The challenge</span>
           <h2>
-            A critical shortage of doctors is costing <em>lives</em>.
+            A critical shortage of doctors is costing lives.
           </h2>
           <p className="lead">
             In developing countries, too few qualified doctors serve too many patients — and most of

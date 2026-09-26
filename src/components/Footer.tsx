@@ -49,9 +49,9 @@ export default function Footer() {
         <div>
           <h4>Explore</h4>
           <nav className="footer__links" aria-label="Footer">
-            <a href="#about">About</a>
+            <a href="#about">About Us</a>
             <a href="#what-we-do">What We Do</a>
-            <a href="#team">Team</a>
+            <a href="#team">Members</a>
             <a href="#volunteer">Volunteer</a>
             <a href="#donate">Donate</a>
           </nav>

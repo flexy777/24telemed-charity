@@ -24,7 +24,7 @@ export default function Donate() {
               <Heart size={16} fill="currentColor" /> Give today
             </span>
             <h2>
-              Your donation <em>transforms lives</em> for families.
+              Your donation transform lives for families.
             </h2>
             <p>
               Every single penny is used to provide quality medical care to the most vulnerable.

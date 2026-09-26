@@ -1,3 +1,4 @@
+import { Building2 } from 'lucide-react'
 import { partners } from '../data'
 
 export default function Partners() {
@@ -7,14 +8,7 @@ export default function Partners() {
   return (
     <section id="supporters" className="section">
       <div className="container section__head reveal">
-        <span className="eyebrow">Our supporters</span>
-        <h2>
-          Made possible by <em>partners</em> across Africa
-        </h2>
-        <p className="lead">
-          Governments, hospitals, pharmacies, businesses and foundations who stand with us —
-          including General Housing and Products Limited, Abuja, Nigeria.
-        </p>
+        <h2>Our Supporters</h2>
       </div>
 
       <div className="marquee" aria-label="Partner logos">
@@ -27,6 +21,13 @@ export default function Partners() {
             ))}
           </div>
         ))}
+      </div>
+
+      <div className="container">
+        <p className="supporter-feature reveal">
+          <Building2 size={20} />
+          General Housing and Products Limited, Abuja, Nigeria
+        </p>
       </div>
     </section>
   )

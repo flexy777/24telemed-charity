@@ -25,16 +25,12 @@ export default function WhatWeDo() {
       <div className="container split">
         <div className="split__media reveal">
           <img src={clinic} alt="Health workers examining a patient" className="rounded-img" />
-          <div className="stamp">
-            <strong>e-Visits</strong>
-            <span>Virtual care</span>
-          </div>
         </div>
 
         <div className="split__copy reveal">
           <span className="eyebrow">What we do</span>
           <h2>
-            Bridging the gap between medical professionals and <em>the patients who need them</em>.
+            Bridging the gap between medical professionals and the patients who need them.
           </h2>
           <p className="lead">
             24Telemed's mission is to transform healthcare delivery in rural communities by building

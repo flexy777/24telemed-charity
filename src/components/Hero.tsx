@@ -8,11 +8,9 @@ export default function Hero() {
         <div className="panel hero__panel">
           <div className="hero__copy">
             <span className="eyebrow eyebrow--light">
-              <HeartPulse size={16} /> Telemedicine for rural Africa
+              <HeartPulse size={16} /> Breaking Down Health Care Disparities in Rural Africa
             </span>
-            <h1>
-              Quality care shouldn't depend on <em>how far</em> you live from a doctor.
-            </h1>
+            <h1>Distance should not be a barrier for medical care.</h1>
             <p className="hero__lead">
               24Telemed connects patients in remote communities with qualified doctors through
               virtual visits — so families get the care they need without travelling for miles.
@@ -20,9 +18,6 @@ export default function Hero() {
             <div className="hero__actions">
               <a href="#donate" className="btn btn--accent btn--lg">
                 Donate today <ArrowRight size={18} />
-              </a>
-              <a href="#about" className="btn btn--ghost btn--lg">
-                Learn about our work
               </a>
             </div>
             <ul className="hero__trust">
