@@ -9,6 +9,7 @@ import {
   Handshake,
   Heart,
   HeartHandshake,
+  Images,
   MapPin,
   Users,
 } from 'lucide-react'
@@ -274,12 +275,23 @@ export default function Events() {
           <div className="stories">
             {stories.map((s, i) => (
               <article
-                className="story reveal"
+                className={`story reveal ${i === 0 ? 'story--featured' : ''}`}
                 style={{ transitionDelay: `${(i % 4) * 80}ms` }}
                 key={s.id}
               >
-                <button onClick={() => onOpen([s.photo], 0, s.title)} aria-label="View photo">
-                  <img src={s.photo} alt="" loading="lazy" />
+                <button
+                  onClick={() => onOpen(s.photos, 0, s.title)}
+                  aria-label={s.photos.length > 1 ? `View ${s.photos.length} photos` : 'View photo'}
+                >
+                  {i === 0 && (
+                    <img src={s.photos[0]} alt="" className="story__backdrop" aria-hidden />
+                  )}
+                  <img src={s.photos[0]} alt="" loading="lazy" />
+                  {s.photos.length > 1 && (
+                    <span className="story__count">
+                      <Images size={14} /> {s.photos.length}
+                    </span>
+                  )}
                 </button>
                 <p>{s.title}</p>
               </article>

@@ -261,24 +261,29 @@ export const kano = {
 
 export const stories = [
   {
+    id: 'anambra-meeting',
+    title: 'Planning telemedicine for Anambra State: 24Telemed met with the Anambra State Commissioner, Dr. Godwin and Tarek to discuss starting telemedicine in the state.',
+    photos: photos('anambra-meeting'),
+  },
+  {
     id: 'gabasawa',
     title: 'Bridging the Gap: 24Telemed and Oweno Foundation bring telehealth to remote villages in Gabasawa, Kano State',
-    photo: photos('gabasawa')[0],
+    photos: photos('gabasawa'),
   },
   {
     id: 'electrical-dealers',
     title: '24Telemed, in collaboration with the electrical dealers association, conducted a successful medical outreach to the community.',
-    photo: photos('electrical-dealers')[0],
+    photos: photos('electrical-dealers'),
   },
   {
     id: 'vixa-trinity',
     title: '24Telemed, in collaboration with Vixa Pharmaceutical Company, donated a box of anti-malaria medicine to Holy Trinity Boys Catholic School in Abuja.',
-    photo: photos('vixa-trinity')[0],
+    photos: photos('vixa-trinity'),
   },
   {
     id: 'malaria-uganda',
     title: 'In our ongoing effort to combat malaria, 24Telemed has distributed treated mosquito nets and malaria medications to the Nsaka Ministries Orphanage in Uganda.',
-    photo: photos('malaria-uganda')[0],
+    photos: photos('malaria-uganda'),
   },
 ]
 

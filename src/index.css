@@ -1795,6 +1795,7 @@ p {
 }
 
 .story button {
+  position: relative;
   display: block;
   width: 100%;
   padding: 0;
@@ -1809,6 +1810,68 @@ p {
   height: 100%;
   object-fit: cover;
   object-position: center top;
+}
+
+.story--featured {
+  grid-column: span 2;
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.story--featured button {
+  flex: 1;
+  aspect-ratio: auto;
+  min-height: 280px;
+}
+
+.story--featured button {
+  overflow: hidden;
+}
+
+.story--featured img:not(.story__backdrop) {
+  position: absolute;
+  inset: 0;
+  object-fit: contain;
+  object-position: center;
+}
+
+.story__backdrop {
+  position: absolute;
+  inset: 0;
+  filter: blur(18px) brightness(0.8);
+  transform: scale(1.15);
+}
+
+.story--featured p {
+  font-size: 1.05rem;
+}
+
+@media (max-width: 1000px) {
+  .story--featured {
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .story--featured {
+    grid-column: auto;
+  }
+}
+
+.story__count {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(51, 33, 59, 0.75);
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
 .story p {
