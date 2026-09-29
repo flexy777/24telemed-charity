@@ -25,7 +25,9 @@ export default function Team() {
           {team.map((p, i) => (
             <li className="member reveal" style={{ transitionDelay: `${(i % 5) * 70}ms` }} key={p.name}>
               <div className="member__photo">
-                <img src={p.photo} alt={p.name} loading="lazy" />
+                <span>
+                  <img src={p.photo} alt={p.name} loading="lazy" />
+                </span>
               </div>
               <strong>{p.name}</strong>
               <span>{p.role}</span>

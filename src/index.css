@@ -879,16 +879,27 @@ p {
 }
 
 .member:hover .member__photo {
-  transform: scale(1.05) rotate(-2deg);
+  transform: scale(1.05);
 }
 
+.member__photo span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid var(--white);
+  overflow: hidden;
+  background: var(--white);
+}
+
+/* Zoom in so the white frames baked into some photos fall outside the circle. */
 .member__photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top;
-  border-radius: 50%;
-  border: 4px solid var(--white);
+  object-position: center top;
+  transform: scale(1.2);
+  transform-origin: center 8%;
 }
 
 .member strong {
@@ -1915,12 +1926,6 @@ p {
   overflow: hidden;
   box-shadow: var(--shadow);
   cursor: zoom-in;
-  transform: rotate(-2deg);
-  transition: transform 0.3s ease;
-}
-
-.award__img:hover {
-  transform: rotate(0);
 }
 
 .award__img img {
