@@ -1,55 +1,39 @@
 import { useEffect } from 'react'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Impact from './components/Impact'
-import WhatWeDo from './components/WhatWeDo'
-import Challenge from './components/Challenge'
-import About from './components/About'
-import Team from './components/Team'
-import Partners from './components/Partners'
-import Donate from './components/Donate'
-import Volunteer from './components/Volunteer'
 import Footer from './components/Footer'
+import Home from './pages/Home'
+import Events from './pages/Events'
 
-function useReveal() {
+// Scroll to the #section in the URL after navigating, or to the top for a new page.
+function ScrollManager() {
+  const { pathname, hash } = useLocation()
+
   useEffect(() => {
-    const els = document.querySelectorAll<HTMLElement>('.reveal')
-    if (!('IntersectionObserver' in window)) {
-      els.forEach((el) => el.classList.add('is-visible'))
-      return
+    if (hash) {
+      const id = hash.slice(1)
+      const t = window.setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+      }, 50)
+      return () => window.clearTimeout(t)
     }
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add('is-visible')
-            io.unobserve(e.target)
-          }
-        })
-      },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' },
-    )
-    els.forEach((el) => io.observe(el))
-    return () => io.disconnect()
-  }, [])
+    window.scrollTo(0, 0)
+  }, [pathname, hash])
+
+  return null
 }
 
 export default function App() {
-  useReveal()
-
   return (
     <>
+      <ScrollManager />
       <Navbar />
       <main>
-        <Hero />
-        <Impact />
-        <WhatWeDo />
-        <Challenge />
-        <About />
-        <Team />
-        <Partners />
-        <Donate />
-        <Volunteer />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
       </main>
       <Footer />
     </>

@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 import { Heart, Menu, X } from 'lucide-react'
 import logo from '../assets/logo-mark.png'
 
 const links = [
-  { href: '#about', label: 'About Us' },
-  { href: '#what-we-do', label: 'What We Do' },
-  { href: '#team', label: 'Members' },
-  { href: '#supporters', label: 'Supporters' },
-  { href: '#volunteer', label: 'Volunteer' },
+  { to: '/#about', label: 'About Us' },
+  { to: '/#what-we-do', label: 'What We Do' },
+  { to: '/#team', label: 'Members' },
+  { to: '/events', label: 'Events' },
+  { to: '/#supporters', label: 'Supporters' },
+  { to: '/#volunteer', label: 'Volunteer' },
 ]
 
 export default function Navbar() {
@@ -26,23 +28,29 @@ export default function Navbar() {
   return (
     <header className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
       <div className="container nav__inner">
-        <a href="#top" className="nav__brand" onClick={close}>
+        <Link to="/" className="nav__brand" onClick={close}>
           <img src={logo} alt="" width={64} height={51} />
           <span>
             <strong>24Telemed Foundation</strong>
             <small>Connecting Rural Africa</small>
           </span>
-        </a>
+        </Link>
 
         <nav className={`nav__links ${open ? 'is-open' : ''}`} aria-label="Main">
-          {links.map((l) => (
-            <a key={l.href} href={l.href} onClick={close}>
-              {l.label}
-            </a>
-          ))}
-          <a href="#donate" className="btn btn--accent nav__cta" onClick={close}>
+          {links.map((l) =>
+            l.to.startsWith('/#') ? (
+              <Link key={l.to} to={l.to} onClick={close}>
+                {l.label}
+              </Link>
+            ) : (
+              <NavLink key={l.to} to={l.to} onClick={close}>
+                {l.label}
+              </NavLink>
+            ),
+          )}
+          <Link to="/#donate" className="btn btn--accent nav__cta" onClick={close}>
             <Heart size={16} fill="currentColor" /> Donate
-          </a>
+          </Link>
         </nav>
 
         <button
