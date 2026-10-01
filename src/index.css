@@ -902,6 +902,16 @@ p {
   transform-origin: center 8%;
 }
 
+.member__photo--full img {
+  transform: none;
+  object-position: center 15%;
+}
+
+.member__photo--shrink img {
+  transform: scale(0.86);
+  transform-origin: center bottom;
+}
+
 .member strong {
   display: block;
   font-size: 1rem;

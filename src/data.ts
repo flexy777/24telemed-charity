@@ -27,7 +27,16 @@ export const org = {
   },
 }
 
-export type Person = { name: string; role: string; location?: string; photo: string }
+// noZoom: show the whole photo in the circle (for photos where the head touches the top edge).
+// shrink: also scale it down, leaving white space above the head (white-background photos only).
+export type Person = {
+  name: string
+  role: string
+  location?: string
+  photo: string
+  noZoom?: boolean
+  shrink?: boolean
+}
 
 export const founder: Person = {
   name: 'Mariette Amadi, MD',
@@ -60,8 +69,9 @@ export const team: Person[] = [
     role: 'Business Manager',
     location: 'New York',
     photo: chinelo,
+    noZoom: true,
   },
-  { name: 'Sheila Nwankwo', role: 'Banker', location: 'Nigeria', photo: sheila },
+  { name: 'Sheila Nwankwo', role: 'Banker', location: 'Nigeria', photo: sheila, shrink: true },
   { name: 'Barr. Obiageli Okaro', role: 'Lawyer', location: 'Abuja, Nigeria', photo: obiageli },
   {
     name: 'Mr. Mireku Kwabena Francis',

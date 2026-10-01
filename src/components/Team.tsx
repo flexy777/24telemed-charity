@@ -24,7 +24,7 @@ export default function Team() {
         <ul className="team">
           {team.map((p, i) => (
             <li className="member reveal" style={{ transitionDelay: `${(i % 5) * 70}ms` }} key={p.name}>
-              <div className="member__photo">
+              <div className={`member__photo ${p.noZoom ? 'member__photo--full' : ''} ${p.shrink ? 'member__photo--shrink' : ''}`}>
                 <span>
                   <img src={p.photo} alt={p.name} loading="lazy" />
                 </span>
